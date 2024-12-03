@@ -30,3 +30,9 @@ So for example a complete command could be
 ```
 scala-cli 2024 -M day1.ex1
 ```
+
+### Goals
+
+As long as performances are not needed, I prefer to write easy to read and immutable code, while still keeping a correct
+complexity. I'm fine with having some unsafe code though, when I use options or other wrappers they are here to manage
+the logic pathes more easily, not to make the code fully covered against runtime exceptions
