@@ -1,15 +1,12 @@
 package day1
 
 import utils.inputs.Input
+import utils.run.Run
 
-@main def example(): Unit =
-  println(s"The solution is ${part1(Input.loadExampleForDay(1))}")
-
-@main def ex1(): Unit =
-  println(s"The solution is ${part1(Input.loadForDay(1))}")
-  
-@main def ex2(): Unit =
-  println(s"The solution is ${part2(Input.loadForDay(1))}")
+given day: Run.Day = 1
+@main def example() = Run(Input.Example)(part1)
+@main def ex1()     = Run(Input.Exercise)(part1)
+@main def ex2()     = Run(Input.Exercise)(part2)
 
 private def readInput(input: String): (List[Int], List[Int]) =
   input

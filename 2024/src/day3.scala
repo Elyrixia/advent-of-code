@@ -1,15 +1,12 @@
 package day3
 
 import utils.inputs.Input
+import utils.run.Run
 
-@main def example(): Unit =
-  println(s"The solution is ${part1(Input.loadExampleForDay(3))}")
-
-@main def ex1(): Unit =
-  println(s"The solution is ${part1(Input.loadForDay(3))}")
-
-@main def ex2(): Unit =
-  println(s"The solution is ${part2(Input.loadForDay(3))}")
+given day: Run.Day = 3
+@main def example() = Run(Input.Example)(part1)
+@main def ex1()     = Run(Input.Exercise)(part1)
+@main def ex2()     = Run(Input.Exercise)(part2)
 
 private val regexMul = """mul\(([0-9]{1,3}),([0-9]{1,3})\)""".r
 private def sumMul(text: String): Int =
