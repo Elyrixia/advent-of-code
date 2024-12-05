@@ -4,7 +4,6 @@ import utils.inputs.Input
 import utils.run.Run
 
 given day: Run.Day = 4
-
 @main def example() = Run(Input.Example)(part1)
 @main def ex1()     = Run(Input.Exercise)(part1)
 @main def ex2()     = Run(Input.Exercise)(part2)
